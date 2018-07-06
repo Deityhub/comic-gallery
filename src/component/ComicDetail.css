@@ -1,0 +1,25 @@
+.detail-container {
+	margin-top: 80px;
+	text-align: center;
+
+}
+
+.container-house {
+  width: 85%;
+  margin: auto;
+  margin-top: 200px;
+  height: 300px;
+  border: 1px solid black;
+  display: flex;
+}
+
+img {
+  width: 50%;
+  height: 100%;
+}
+
+.container-text {
+  width: 50%;
+  height: 100%;
+  background-color: grey;
+}

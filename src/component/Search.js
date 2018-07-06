@@ -1,6 +1,7 @@
 import React from 'react';
 import { API_URL } from '../config';
 import Loading from './Loading';
+import { withRouter } from 'react-router-dom';
 import './Search.css';
 
 class Search extends React.Component {
@@ -18,6 +19,10 @@ class Search extends React.Component {
 		this.handleRender = this.handleRender.bind(this);
 	}
 
+	componentWillReceiveProps(){
+		//work on the search here
+	}
+
 	handleChange(e) {
 		const searchQuery = e.target.value;
 
@@ -33,15 +38,31 @@ class Search extends React.Component {
 			return '';
 		}
 
+		//implementing the search from the database
+		fetch(`${API_URL}/book/find/${searchQuery}`)
+			.then((res) => {
+				return res.json();
+			})
+			.then((data) => {
+				/*console.log(data);
+				console.log(this.state.searchResults);*/
+				this.setState({
+					searchResults: data
+				})
+			})
+			.catch((err) => {
+				console.log(err);
+			});
+
 	}
 
-	handleRender(currentId){
+	handleRender(id){
 		this.setState({
 			searchQuery: '',
 			searchResults: []
 		})
 
-		this.props.history.push(`/currency/${currentId}`)
+		this.props.history.push(`/comic/${id}`);
 	}
 
 	renderSearch(){
@@ -56,8 +77,8 @@ class Search extends React.Component {
 				<div className='Search-result-container'>
 					{searchResults.map((result) => {
 						return (
-							<div key={result.id} className='Search-result' onClick={() => { this.handleRender(result.id)}}>
-								{result.name} ({result.symbol})
+							<div key={result._id} className='Search-result' onClick={() => { this.handleRender(result._id)}}>
+								{result.title}
 							</div>
 						)
 					})}
@@ -95,4 +116,4 @@ class Search extends React.Component {
 	}
 }
 
-export default Search;
+export default withRouter(Search);

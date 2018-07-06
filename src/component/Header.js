@@ -19,7 +19,7 @@ const Header = () => {
             <ul>
                 <li><NavLink className='nav-link' to='/'>Home</NavLink></li>
                 <li><NavLink className='nav-link' to='/about'>About</NavLink></li>
-                <li><NavLink className='nav-link' to='/contact'>Contact</NavLink></li>
+                <li><NavLink className='nav-link' to='/categories'>Category</NavLink></li>
                 <li style={btn}><NavLink className='nav-link nav-link-subscribe' to='/subscribe'>Subscribe</NavLink></li>
             </ul>
       </nav>
