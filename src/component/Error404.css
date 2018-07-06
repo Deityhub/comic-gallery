@@ -1,0 +1,16 @@
+.error {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 18px;
+}
+
+.error-btn {
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #9cb3c9;
+    border-radius: 4px;
+    transition: border .2s;
+    line-height: 40px;
+    height: 40px;
+    font-size: 16px;
+}

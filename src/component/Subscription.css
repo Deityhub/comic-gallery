@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.subscribe {
+    padding-left: 205px;
+    padding-top: 30px;
+    font-family: Roboto;
+    display: inline-block;
+}
+
+.bg-img {
+    background-image: url('../assets/img/backgroundImg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 20px;
+    min-height: 650px;
+}
+
+.subscribe h2 {
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 45px;
+    color: #082CEA;
+    margin-bottom: 0
+
+}
+
+.subscribe p {
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 20px;
+    color: #000000;
+    margin-top: 2px;
+}
+
+.subscribe input {
+    display: inline-block;
+    margin-top: 10px
+}
+
+.button {
+    border: none;
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    background-color: #ff2323;
+    font-style: normal;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.email {
+    width: 300px;
+    border: none;
+    height: 40px;
+    border-bottom: 1px solid black;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.select {
+    margin-bottom: 10px;
+}
